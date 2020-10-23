@@ -1,0 +1,48 @@
+﻿<Window x:Class="AppNettoyagePC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppNettoyagePC"
+        mc:Ignorable="d"
+        x:Name="fenetre"
+        Title="Logiciel nettoyage" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/ico.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="621*"/>
+            <ColumnDefinition Width="379*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="175" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FF006C94" StrokeThickness="0"/>
+        <Rectangle HorizontalAlignment="Left" Height="11" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFCDCDCD" Margin="0,175,0,0" RenderTransformOrigin="0.5,0.5" StrokeThickness="0"/>
+        <!-- Titre -->
+        <Label x:Name="titre" Content="Analyse du PC nécessaire" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="DejaVu Sans Light" FontSize="40" FontWeight="Bold" Height="57" Width="586"/>
+        <!-- Sous titres -->
+        <Label Content="Espace à nettoyer :" HorizontalAlignment="Left" Margin="28,88,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="DejaVu Sans Light" FontSize="22" FontWeight="Bold" Height="36" Width="250"/>
+        <Label Content="Dernière analyse :" HorizontalAlignment="Left" Margin="28,124,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="DejaVu Sans Light" FontSize="22" FontWeight="Bold" Height="36" Width="237"/>
+        <!-- Valeurs -->
+        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="DejaVu Sans" FontSize="22" FontWeight="Normal" RenderTransformOrigin="2.571,1.049" Height="36" Width="82"/>
+        <Label x:Name="espace" Content="??? Mb" HorizontalAlignment="Left" Margin="279,88,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="DejaVu Sans" FontSize="22" FontWeight="Normal" RenderTransformOrigin="2.571,1.049" Height="36" Width="85"/>
+        <Button Content="ANALYSER" Grid.Column="1" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" Height="85" Width="244" Background="#FF006C94" BorderThickness="5,5,5,5" Foreground="White" BorderBrush="White" FontFamily="DejaVu Sans" FontSize="26"/>
+
+        <!--Content-->
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;NETTOYER" HorizontalAlignment="Left" Margin="55,203,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF006C94" BorderThickness="5,5,5,5" Foreground="White" BorderBrush="White" FontFamily="DejaVu Sans" FontSize="26"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;MISE A JOUR" HorizontalAlignment="Left" Margin="55,398,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF006C94" BorderThickness="5,5,5,5" Foreground="White" BorderBrush="White" FontFamily="DejaVu Sans" FontSize="26" Click="Button_MAJ_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;HISTORIQUE" HorizontalAlignment="Left" Margin="547,203,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF006C94" BorderThickness="5,5,5,5" Foreground="White" BorderBrush="White" FontFamily="DejaVu Sans" FontSize="26" Grid.ColumnSpan="2" Click="Button_Histo_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;SITE WEB" HorizontalAlignment="Left" Margin="547,398,0,0" VerticalAlignment="Top" Height="180" Width="400" Background="#FF006C94" BorderThickness="5,5,5,5" Foreground="White" BorderBrush="White" FontFamily="DejaVu Sans" FontSize="26" Grid.ColumnSpan="2" Click="Button_Web_Click"/>
+        <Image Margin="220,226,299,380" Source="/cleaning.png" RenderTransformOrigin="0.47,0.52" IsHitTestVisible="False"/>
+        <Image Margin="232,408,311,176" Source="/refresh.png" IsHitTestVisible="False"/>
+        <Image Margin="87,215,214,369" Source="/list.png" IsHitTestVisible="False" Grid.Column="1"/>
+        <Image Margin="87,408,214,176" Source="/globeb.png" RenderTransformOrigin="0.47,0.52" IsHitTestVisible="False" Grid.Column="1"/>
+
+        <!--Footer-->
+        <Rectangle HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFCDCDCD" Margin="0,594,0,0" RenderTransformOrigin="0.5,0.5" StrokeThickness="0"/>
+        <Label Content="Briac Ferté - 2020" HorizontalAlignment="Left" Margin="24,620,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="DejaVu Sans Light" FontSize="15" FontWeight="Normal" RenderTransformOrigin="2.571,1.049" Height="36" Width="962" Grid.ColumnSpan="2" HorizontalContentAlignment="Center"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFC79696" Margin="0,656,0,0" RenderTransformOrigin="0.5,0.5" StrokeThickness="0" Visibility="Hidden"/>
+        <Label x:Name="actu" Content="Briac Ferté - 2020" HorizontalAlignment="Left" Margin="24,656,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="DejaVu Sans Light" FontSize="15" FontWeight="Normal" RenderTransformOrigin="2.571,1.049" Height="28" Width="962" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
+
+
+
+    </Grid>
+</Window>

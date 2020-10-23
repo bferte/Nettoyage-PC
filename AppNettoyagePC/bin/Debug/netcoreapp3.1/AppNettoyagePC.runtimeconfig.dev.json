@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\typia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\typia\\.nuget\\packages"
+    ]
+  }
+}

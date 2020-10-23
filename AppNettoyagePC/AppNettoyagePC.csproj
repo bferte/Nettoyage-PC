@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cleaning.png" />
+    <None Remove="globeb.png" />
+    <None Remove="ico.ico" />
+    <None Remove="list.png" />
+    <None Remove="refresh.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cleaning.png" />
+    <Resource Include="globeb.png" />
+    <Resource Include="ico.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="list.png" />
+    <Resource Include="refresh.png" />
+  </ItemGroup>
+
+</Project>
